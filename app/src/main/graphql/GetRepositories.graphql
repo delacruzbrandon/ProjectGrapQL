@@ -1,0 +1,25 @@
+query GetRepositories {
+  characters(filter: { name: "rick" }) {
+    results {
+      id
+      name
+      status
+      species
+      gender
+      image
+      origin {
+        name
+        dimension
+        created
+        type
+      }
+      location {
+        name
+      }
+      episode {
+        name
+      }
+
+    }
+  }
+}
