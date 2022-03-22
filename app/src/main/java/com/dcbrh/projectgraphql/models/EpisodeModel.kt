@@ -1,6 +1,6 @@
 package com.dcbrh.projectgraphql.models
 
-data class LocationModel(
+data class EpisodeModel(
     val name: String,
-    val dimension: String
+    val episode: String
 )

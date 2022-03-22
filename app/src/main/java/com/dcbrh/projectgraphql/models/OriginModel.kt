@@ -1,4 +1,6 @@
 package com.dcbrh.projectgraphql.models
 
-class OriginModel {
-}
+data class OriginModel(
+    val name: String,
+    val dimension: String
+)

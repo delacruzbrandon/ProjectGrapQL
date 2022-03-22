@@ -1,7 +1,6 @@
 package com.dcbrh.projectgraphql.models
 
-import com.dcbrh.projectgraphql.LifeStatus
-import java.util.*
+import com.dcbrh.projectgraphql.util.LifeStatus
 
 data class CharacterModel (
     val id: Int,
@@ -9,6 +8,6 @@ data class CharacterModel (
     val status: LifeStatus,
     val species: String,
     val image: String,
-    val origin: OriginModel,
-    val location: LocationModel
+    val lastLocation: String,
+    val firstSeen: String
 )
