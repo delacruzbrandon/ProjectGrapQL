@@ -1,5 +1,5 @@
-query GetRepositories {
-  characters(filter: { name: "rick" }) {
+query GetCharacters($name:String!) {
+  characters(filter: { name:$name }) {
     results {
       id
       name
@@ -10,16 +10,30 @@ query GetRepositories {
       origin {
         name
         dimension
-        created
-        type
       }
       location {
         name
+        dimension
       }
-      episode {
-        name
-      }
+    }
+  }
+}
 
+query GetCharacter($characterId: ID!) {
+  character(id: $characterId) {
+    id
+    name
+    status
+    species
+    gender
+    image
+    origin {
+      name
+      dimension
+    }
+    location {
+      name
+      dimension
     }
   }
 }

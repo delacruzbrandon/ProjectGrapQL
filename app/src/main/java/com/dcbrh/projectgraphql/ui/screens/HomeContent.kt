@@ -36,8 +36,8 @@ fun CharacterCardList(
 ) {
     LazyColumn {
         items(
-            items = characterList,
-            key = {character -> character.id}
+            items = characterList
+//            key = {character -> character.id}
         ) { character ->
             CharacterCard(character = character)
         }
@@ -50,6 +50,7 @@ fun CharacterCard(
 ) {
     Surface(
         modifier = Modifier
+            .padding(8.dp)
             .fillMaxWidth()
             .height(intrinsicSize = IntrinsicSize.Max),
         color = MaterialTheme.colors.background,
@@ -166,11 +167,11 @@ fun CharacterCardTextSubtitle(subtitleText: String) {
 private fun PreviewHomeContent() {
 
     val characterModel = CharacterModel(
-        1,
+        "1",
         "Rick",
         LifeStatus.Alive,
         "Human",
-        "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+        "https://rickandmortyapi.com/api/character/avatar/11.jpeg",
         "Citadel of Ricks",
         "Earth (C-137)"
     )
